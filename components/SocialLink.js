@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function SocialLink({ icon, href, className }) {
-  return <div className="ml-3 p-1 relative max-w-full max-h-full min-w-min rounded-full border-transparent hover:border-red-500">
+  return <div className="ml-3 p-1 relative max-w-full max-h-full min-w-min rounded-full border-1 hover:border-red-500">
     <a href={href} target='_blank' className="rounded-full">
       <div className="max-w-full max-h-full rounded-full flex items-center text-sm">
         <FontAwesomeIcon icon={icon} style={{ fontSize: 24, color: 'white' }} className={className} />
