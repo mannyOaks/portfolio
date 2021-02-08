@@ -67,13 +67,13 @@ export default function Header() {
               <SocialLink icon={faGithub} href='https://github.com/mannyOaks' />
               <SocialLink icon={faLinkedin} href='https://www.linkedin.com/in/manuel-robles-368035204' />
 
-              <div className="ml-6 items-center">
+              {/* <div className="ml-6 items-center">
                 <FontAwesomeIcon
                   icon={theme === 'light' ? faSolidLightbulb : faLightbulb}
                   onClick={switchTheme}
                   className="text-white text-xl"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
 
