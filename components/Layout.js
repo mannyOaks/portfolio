@@ -19,6 +19,8 @@ export default function Layout({ children, pageTitle = 'Manuel Robles', descript
         <meta property="og:site_name" content="Manuel Robles Porfolio" key="ogsitename" />
         <meta property="og:title" content={pageTitle} key="ogtitle" />
         <meta property="og:description" content={description} key="ogdesc" />
+
+
       </Head>
       <div>
         <Header />

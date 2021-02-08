@@ -1,13 +1,15 @@
 module.exports = {
-  purge: ['./pages/**/*.js', './components/**/*.js'],
-  darkMode: 'class', // or 'media' or 'class'
+  future: {
+    purgeLayersByDefault: true,
+  },
+  purge: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     extend: {},
   },
   variants: {
-    extend: {
-      borderColor: ['hover'],
-    },
+    textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+    borderColor: ['responsive', 'hover', 'focus', 'group-hover'],
   },
   plugins: [],
 }
