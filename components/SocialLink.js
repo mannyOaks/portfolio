@@ -1,19 +1,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export default function SocialLink({ icon, href, className }) {
+export default function SocialLink({ icon, href, first }) {
   return (
     <a
       href={href}
       target='_blank'
-      className="rounded-full m-2 border-2 border-white"
-      style={{ width: '2.1rem', height: '2.1rem' }}
+      className={`h-9 w-9 rounded-full flex border-2 border-transparent hover:border-white ${first ? "mr-1" : "m-1"}`}
     >
-      {/* <FontAwesomeIcon
+      <FontAwesomeIcon
         icon={icon}
         className="m-auto text-white text-xl"
-      /> */}
-      <span className="text-white text-xl mx-auto">A</span>
+      />
     </a>
-
   )
 }

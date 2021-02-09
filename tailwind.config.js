@@ -8,8 +8,10 @@ module.exports = {
     extend: {},
   },
   variants: {
-    textColor: ['responsive', 'hover', 'focus', 'group-hover'],
-    borderColor: ['responsive', 'hover', 'focus', 'group-hover'],
+    extend: {
+      textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+      borderColor: ['dark', 'responsive', 'hover', 'focus', 'group-hover'],
+    },
   },
   plugins: [],
 }

@@ -1,0 +1,21 @@
+dark:
+    #52057b
+    #52057b 
+    #52057b
+    #52057b
+
+    bg-gray-800	
+    bg-gray-700	
+    bg-gray-200	
+    bg-green-700
+
+light:
+    #52057b
+    #52057b
+    #52057b
+    #52057b
+
+    bg-gray-100	
+    bg-gray-900	o bg-gray-800
+    bg-gray-700	
+    bg-gray-400	
