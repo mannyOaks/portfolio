@@ -8,7 +8,7 @@ import { SocialLink } from 'components'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
-export default function Header() {
+function Header() {
   const router = useRouter()
   const { theme, setTheme } = useTheme()
   const [isMounted, setIsMounted] = useState(false)
@@ -33,20 +33,24 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <h1 className="text-white	text-2xl font-bold">Manuel Robles</h1>
+              <Link href='/'>
+                <a className="text-white	text-2xl font-bold">Manuel Robles</a>
+              </Link>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4 text-white">
-                <Link href='/'>
-                  <a className={`px-3 py-2 rounded-md text-base font-medium ${router.pathname === '/' ? currentClass : defaultClass}`}>
-                    Home
-                  </a>
-                </Link>
                 <Link href='/education'>
                   <a className={`px-3 py-2 rounded-md text-base font-medium ${router.pathname === '/education' ? currentClass : defaultClass}`}>
                     Education
                   </a>
                 </Link>
+
+                <Link href='/experience'>
+                  <a className={`px-3 py-2 rounded-md text-base font-medium ${router.pathname === '/experience' ? currentClass : defaultClass}`}>
+                    Experience
+                  </a>
+                </Link>
+
                 <Link href='/projects'>
                   <a className={`px-3 py-2 rounded-md text-base font-medium ${router.pathname === '/projects' ? currentClass : defaultClass}`}>
                     Projects
@@ -58,7 +62,7 @@ export default function Header() {
           </div>
           <div className="hidden md:block">
             <div className="ml-4 flex items-center md:ml-6">
-              <SocialLink icon={faFacebookF} href='https://www.facebook.com/manito0198' first />
+              <SocialLink icon={faFacebookF} href='https://www.facebook.com/mannyrobh' first />
               <SocialLink icon={faTwitter} href='https://twitter.com/mannyrobh' />
               {/* <SocialLink icon={faInstagram} href='https://www.instagram.com/mannyoaks/' /> */}
               <SocialLink icon={faGithub} href='https://github.com/mannyOaks' />
@@ -68,7 +72,7 @@ export default function Header() {
                 <FontAwesomeIcon
                   icon={theme === 'light' ? faLightbulb : faSolidLightbulb}
                   onClick={switchTheme}
-                  className="m-auto text-white text-xl"
+                  className="m-auto text-white text-xl no-select"
                 />
               </div>
             </div>
@@ -138,3 +142,4 @@ export default function Header() {
   )
 }
 
+export default Header

@@ -1,6 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { IconProp } from '@fortawesome/fontawesome-svg-core'
 
-export default function SocialLink({ icon, href, first }) {
+
+interface SocialLinkProps {
+  icon: IconProp,
+  href: string,
+  first?: boolean
+}
+
+
+function SocialLink({ icon, href, first }: SocialLinkProps) {
   return (
     <a
       href={href}
@@ -14,3 +23,5 @@ export default function SocialLink({ icon, href, first }) {
     </a>
   )
 }
+
+export default SocialLink

@@ -1,6 +1,6 @@
 import { Layout } from "components"
 
-export default function ProjectPage() {
+function ProjectPage() {
   return (
     <Layout>
       <header className="bg-white shadow">
@@ -15,3 +15,5 @@ export default function ProjectPage() {
     </Layout>
   )
 }
+
+export default ProjectPage

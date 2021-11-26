@@ -1,7 +1,15 @@
 import { Header } from 'components'
 import Head from 'next/head'
 
-export default function Layout({ children, pageTitle = '', description = '', previewImage = 'https://mannyrobh.dev/images/me.jpg', ...props }) {
+interface LayoutProps {
+  children: any,
+  previewImage?: string,
+  pageTitle?: string,
+  description?: string, 
+}
+
+
+function Layout({ children, pageTitle, description, previewImage = 'https://mannyrobh.dev/images/me.jpg' }: LayoutProps) {
   return (
     <>
       <Head>
@@ -58,3 +66,6 @@ export default function Layout({ children, pageTitle = '', description = '', pre
     </>
   )
 }
+
+
+export default Layout
