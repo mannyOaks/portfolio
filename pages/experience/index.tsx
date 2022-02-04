@@ -1,10 +1,11 @@
 import { Layout } from "components"
+import { NextPage } from "next"
 
-function ExperiencePage() {
-  return <Layout pageTitle='Education'>
+
+const ExperiencePage: NextPage = () => {
+  return <Layout pageTitle='Experience'>
     <p>When I have something to show I'll show it here</p>
-  </Layout>
+  </Layout>;
 }
 
-
-export default ExperiencePage
+export default ExperiencePage;

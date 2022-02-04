@@ -8,16 +8,14 @@ class Doc extends Document {
   }
   
   render() {
-    return (
-      <Html>
-        <Head />
-        <body className="bg-gray-300 dark:bg-gray-800">
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    )
+    return<Html>
+      <Head />
+      <body className="bg-gray-300 dark:bg-gray-800">
+        <Main />
+        <NextScript />
+      </body>
+    </Html>;
   }
 }
 
-export default Doc
+export default Doc;

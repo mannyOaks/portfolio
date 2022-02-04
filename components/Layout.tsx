@@ -46,7 +46,7 @@ function Layout({ children, pageTitle, description, previewImage = 'https://mann
           <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
 
             <div className="px-4 py-6 sm:px-0">
-              <div className="border-4 border-dashed rounded-lg h-96 border-gray-800 dark:border-gray-200">
+              <div className="border-4 rounded-lg h-96 border-gray-800 dark:border-gray-200">
 
                 <header className="shadow h-full">
                   <div className="h-full max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-200">
