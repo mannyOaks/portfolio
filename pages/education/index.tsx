@@ -1,10 +1,12 @@
-import { Layout } from 'components'
-import { NextPage } from 'next'
+import { Layout } from 'components';
+import { NextPage } from 'next';
 
-const HomePage: NextPage = () => {
-  return <Layout pageTitle='Education'>
-    <p>When I have something to show I'll show it here</p>
-  </Layout>;
+const EducationPage: NextPage = () => {
+  return (
+    <Layout pageTitle="Education">
+      <p>When I have something to show I'll show it here</p>
+    </Layout>
+  );
 };
 
-export default HomePage;
+export default EducationPage;

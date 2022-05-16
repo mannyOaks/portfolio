@@ -1,15 +1,19 @@
-import { Header } from 'components'
-import Head from 'next/head'
+import { Header } from 'components';
+import Head from 'next/head';
 
 interface LayoutProps {
-  children: any,
-  previewImage?: string,
-  pageTitle?: string,
-  description?: string, 
+  children: any;
+  previewImage?: string;
+  pageTitle?: string;
+  description?: string;
 }
 
-
-function Layout({ children, pageTitle, description, previewImage = 'https://mannyrobh.dev/images/me.jpg' }: LayoutProps) {
+const Layout: React.FC<LayoutProps> = ({
+  children,
+  pageTitle,
+  description,
+  previewImage = 'https://mannyrobh.dev/images/me.jpg',
+}: LayoutProps) => {
   return (
     <>
       <Head>
@@ -24,11 +28,13 @@ function Layout({ children, pageTitle, description, previewImage = 'https://mann
         {/* Open Graph */}
         {/* <meta property="og:url" content={currentURL} key="ogurl" /> */}
         <meta property="og:image" content={previewImage} key="ogimage" />
-        <meta property="og:site_name" content="Manuel Robles Porfolio" key="ogsitename" />
+        <meta
+          property="og:site_name"
+          content="Manuel Robles Porfolio"
+          key="ogsitename"
+        />
         <meta property="og:title" content={pageTitle} key="ogtitle" />
         <meta property="og:description" content={description} key="ogdesc" />
-
-
       </Head>
       <div>
         <Header />
@@ -41,13 +47,10 @@ function Layout({ children, pageTitle, description, previewImage = 'https://mann
           </div>
         </header>} */}
 
-
         <main>
           <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-
             <div className="px-4 py-6 sm:px-0">
               <div className="border-4 rounded-lg h-96 border-gray-800 dark:border-gray-200">
-
                 <header className="shadow h-full">
                   <div className="h-full max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-200">
                     <h1 className="text-3xl font-bold leading-tight text-gray-900">
@@ -59,13 +62,11 @@ function Layout({ children, pageTitle, description, previewImage = 'https://mann
                 </header>
               </div>
             </div>
-
           </div>
         </main>
       </div>
     </>
-  )
-}
+  );
+};
 
-
-export default Layout
+export default Layout;
